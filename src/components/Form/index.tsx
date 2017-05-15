@@ -4,50 +4,58 @@ declare var require: any;
 const styles = require('./style.css')
 
 interface BoxProps {
-    AddMessage: any;
+    AddNote: any;
 };
 
 interface BoxState {
-    name?: string,
-    message?: string,
+    title?: string,
+    text?: string,
 };
 
+// This component renders the form to create a note
 class Form extends React.Component<BoxProps, BoxState> {
 
     constructor(props: any) {
         super(props)
-        this.state = { name: '', message: '' }
+
+        // We control the values of the fields from the state
+        // also known as "Controlled Components"
+        this.state = { title: '', text: '' }
 
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleMessageChange = this.handleMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // Set the value of the name filed
     handleNameChange(event: any) {
-        this.setState({ name: event.target.value })
+        this.setState({ title: event.target.value })
     }
 
+    // Set the value of the text filed
     handleMessageChange(event: any) {
-        this.setState({ message: event.target.value })
+        this.setState({ text: event.target.value })
     }
 
+    // On form submit call the AddNote function of the <Home /> component
     handleSubmit(event) {
         event.preventDefault();
-        this.props.AddMessage({name: this.state.name, message: this.state.message})
+        this.props.AddNote({ title: this.state.title, text: this.state.text })
+        this.setState({ title: '', text: '' })
     }
 
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Name: 
-                        <input value={this.state.name} onChange={this.handleNameChange} />
-                    </label><br/>
-                    <label>Message: 
-                        <input value={this.state.message} onChange={this.handleMessageChange} />
-                    </label>
-                    <button type="submit"></button>
+                    <input type="text" placeholder="Title" value={this.state.title} onChange={this.handleNameChange} required />
+                    <textarea placeholder="Note" value={this.state.text} onChange={this.handleMessageChange} required />
+                    <div className={styles.buttonContainer}>
+                        <button type="submit">Add</button>
+                    </div>
                 </form>
+
+
             </div>
         );
     }

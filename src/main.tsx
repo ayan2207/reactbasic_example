@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render } from 'react-dom'
 import { AppContainer as HotLoaderAppContainer } from 'react-hot-loader'
 
-import Root from './root'
+import Root from './containers/home'
 
 declare var module: any;
 declare var require: any;
@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 if (module.hot) {
-  module.hot.accept('./root', () => {
+  module.hot.accept('./containers/home', () => {
     // If you use Webpack 2 in ES modules mode, you can
     // use <App /> here rather than require() a <NextApp />.
-    const NextRoot = require('./root').default;
+    const NextRoot = require('./containers/home').default;
     render(
       <HotLoaderAppContainer>
-         <NextRoot />
+        <NextRoot />
       </HotLoaderAppContainer>,
       document.getElementById('mount')
     )

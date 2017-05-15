@@ -1,4 +1,4 @@
-# Basic React Project using Typescript
+# Basic React Note Maker Project using Typescript
 
 ## Setup
 

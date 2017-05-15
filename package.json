@@ -1,0 +1,53 @@
+{
+  "name": "reactbasics",
+  "version": "0.0.1",
+  "description": "A simple React.JS project using Typescript",
+  "scripts": {
+    "compile": "webpack",
+    "lint": "eslint '**/*.js'",
+    "start": "webpack-dev-server"
+  },
+  "author": "Ayan Hedayati, <ayanhedayati@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^0.14.52",
+    "@types/react-addons-css-transition-group": "^0.14.19",
+    "@types/react-bootstrap": "0.0.37",
+    "@types/react-dom": "^0.14.19",
+    "autoprefixer": "6.4.0",
+    "babel-core": "6.14.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1",
+    "css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": "1.0.1",
+    "react": "15.3.1",
+    "react-addons-css-transition-group": "15.3.1",
+    "react-addons-update": "15.3.1",
+    "react-dom": "15.3.1",
+    "react-hot-loader": "3.0.0-beta.2",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.3.2",
+    "webpack": "^1.13.2",
+    "webpack-combine-loaders": "^2.0.3",
+    "webpack-dev-server": "1.16.2",
+    "webpack-hot-middleware": "2.12.2"
+  },
+  "devDependencies": {
+    "babel-jest": "15.0.0",
+    "babel-polyfill": "6.13.0",
+    "babel-register": "6.14.0",
+    "css-loader": "0.24.0",
+    "eslint": "3.4.0",
+    "eslint-config-airbnb": "10.0.1",
+    "eslint-plugin-import": "1.14.0",
+    "eslint-plugin-jsx-a11y": "2.2.0",
+    "eslint-plugin-react": "6.2.0",
+    "node-sass": "3.8.0",
+    "postcss-loader": "0.11.0",
+    "react-addons-test-utils": "15.3.1",
+    "sass-loader": "4.0.0",
+    "style-loader": "0.13.1",
+    "webpack-dev-server": "1.16.2"
+  }
+}

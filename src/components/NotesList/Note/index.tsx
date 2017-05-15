@@ -50,4 +50,5 @@ class Note extends React.Component<NoteProps, NoteState> {
     }
 }
 
+
 export default Note;
